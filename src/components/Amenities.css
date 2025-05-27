@@ -1,0 +1,127 @@
+/* External CSS for Amenities Component */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;400;500&display=swap');
+
+.amenities-section {
+  font-family: 'Playfair Display', serif;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.amenities-header {
+  text-align: left;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.intro-text {
+  color: #b59c7d;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.amenities-title {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.amenities-description {
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 250px);
+  gap: 0;
+}
+
+.amenity-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.amenity-block.light {
+  background-color: #d3d3d3;
+}
+
+.amenity-block.dark {
+  background-color: #2c2c2c;
+  color: #fff;
+  position: relative;
+}
+
+.icon-image {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  margin-bottom: 1rem;
+  filter: brightness(0) invert(0.8); /* Makes icons match your gold color */
+  transition: all 0.3s ease;
+}
+
+/* Optional hover effect */
+.icon-image:hover {
+  filter: brightness(0) invert(1);
+  transform: scale(1.1);
+}
+
+.amenity-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+.amenity-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.discover-button {
+font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      color: #b89778;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border: 1px solid #b89778;
+      padding: 12px;
+      width: 20em;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+.discover-button:hover {
+   background-color: #b89778;
+      color: #1a1a1a;
+}
+
+.intro-line-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 50px;
+  background: #bf9766;
+}

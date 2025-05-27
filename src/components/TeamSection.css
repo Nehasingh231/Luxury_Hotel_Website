@@ -1,0 +1,141 @@
+.team-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.team-header .team-subtitle {
+  letter-spacing: 2px;
+  color: #c59d5f;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+
+.team-header .team-title {
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  width: 200px;
+  text-align: left;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: #ccc;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#999, #ccc);
+}
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  z-index: 2; /* Ensure icons stay above image */
+}
+
+.social-icons li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons li a:hover {
+  background: #c59d5f; /* Your gold color */
+  transform: scale(1.1);
+}
+
+/* Tooltip styles */
+.social-icons li {
+  position: relative;
+}
+
+.social-icons li a::after {
+  /* content: attr(aria-label); */
+  position: absolute;
+  right: 40px; /* Position to the left of icon */
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.social-icons li:hover a::after {
+  opacity: 1;
+}
+
+/* Image Wrapper - ensure proper stacking */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden; /* Keep this for image cropping */
+}
+
+.card-text h4 {
+  font-size: 1rem;
+  margin: 10px 0 4px;
+  font-weight: 600;
+}
+
+.card-text p {
+  font-size: 0.8rem;
+  color: #a28f7a;
+  margin: 0;
+}
+
+.line-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  width: 100%;            /* Takes full width */
+  margin: 0 auto;        
+}
+
+.vertical-line {
+  width: 1.5px;
+  height: 60px;
+  background: #bf9766;
+ 
+}

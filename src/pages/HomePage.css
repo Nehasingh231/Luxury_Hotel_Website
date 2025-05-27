@@ -1,0 +1,227 @@
+.hero {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom, 
+    #222121 0%, 
+    rgba(30, 33, 33, 0.5) 50%, 
+    #222121 100%
+  );
+  color: white;
+  position: relative;
+  font-family: 'Georgia', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.hero-overlay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #c9a96e;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 30px;
+  background: #c9a96e;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.discover-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-style: italic;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.discover-btn:hover {
+  color: #c9a96e;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.left-arrow {
+  left: 30px;
+}
+
+.right-arrow {
+  right: 30px;
+}
+
+.booking-bar {
+  display: flex;
+  background: #1b1b1b;
+  padding: 25px 40px;
+  gap: 30px;
+  color: white;
+  width: 70%;
+  max-width: 900px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  border-radius: 5px;
+  box-shadow: 0 4px 10 10px rgba(0, 0, 0, 0.2);
+}
+
+.booking-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-item label {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2d2d2d;
+  padding: 12px 15px;
+  border-radius: 5px;
+  min-width: 180px;
+  font-size: 0.9rem;
+}
+
+.input-box select {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  appearance: none;
+  padding-right: 20px;
+}
+
+.check-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #c9a96e;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.check-btn:hover {
+  background: #b5925a;
+}
+
+.date-picker-custom-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.input-box.error {
+  border: 1px solid #ff6b6b;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.booking-item {
+  position: relative;
+}
+
+.room-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.room-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+.input-box {
+  position: relative;
+
+}
+
+
+

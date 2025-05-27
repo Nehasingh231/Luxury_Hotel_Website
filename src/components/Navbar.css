@@ -1,0 +1,158 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #222121;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-image {
+  width: 40px;
+  height: auto;
+}
+
+.logo-text .imperial {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.logo-text .grand {
+  display: block;
+  font-size: 10px;
+  color: #aaa;
+  letter-spacing: 1px;
+  margin-top: -5px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #c49b63;
+}
+
+.dropdown-icon {
+  font-size: 10px;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover .dropdown,
+.nav-item.active .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown li {
+  padding: 8px 20px;
+  color: #333;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdown li:hover {
+  color: #c49b63;
+  background-color: #f9f9f9;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 15px;
+    display: none; /* Will be toggled with mobile menu button */
+  }
+
+  .nav-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    display: none;
+    margin-top: 5px;
+  }
+
+  .nav-item:hover .dropdown,
+  .nav-item.active .dropdown {
+    display: block;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: #c49b63;
+}

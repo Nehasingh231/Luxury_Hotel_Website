@@ -1,0 +1,144 @@
+.rooms-section {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  margin-top: 100px;
+}
+
+.rooms-header {
+  margin-bottom: 50px;
+}
+
+.rooms-subtitle {
+  font-size: 0.9rem;
+  color: #c9a96e;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.rooms-subtitle::before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 50px;
+  background: #c9a96e;
+}
+
+.rooms-header h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.room-card {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #222121,
+    rgba(34, 33, 33, 0.24),
+    #222121
+  );
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+  transform: scale(1.02);
+}
+
+.large-card {
+  grid-column: span 3;
+  height: 300px;
+}
+
+.small-card {
+  grid-column: span 2;
+  height: 250px;
+}
+
+.room-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+
+.room-overlay h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.room-overlay p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.divider-line {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+}
+
+
+
+.book-now {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #c9a96e;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid #c9a96e;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.book-now:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.book-and-icons {
+  display: flex;
+  justify-content: space-between; /* This is key */
+  align-items: center; /* Vertical alignment */
+  width: 100%; /* Ensure full width */
+}
+
+.room-icons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* Pushes icons to the right */
+}
+
+.room-icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+   transition: transform 0.3s ease;
+}
+
+.room-icons img:hover {
+  transform: translateY(-3px); /* Move up slightly */
+}
