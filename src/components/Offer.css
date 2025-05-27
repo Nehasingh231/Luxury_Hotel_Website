@@ -1,0 +1,42 @@
+.offer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #333, #999, #333);
+  padding: 90px 100px;
+  color: white;
+  font-family: 'Georgia', serif;
+}
+
+.offer-content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.offer-content h2 {
+  font-size: 42px;
+  margin: 10px 0 0 0;
+}
+
+.offer-button button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-style: italic;
+}
+
+.offer-button button:hover {
+  background: white;
+  color: black;
+}
+
+.arrow {
+  font-size: 22px;
+}

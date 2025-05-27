@@ -1,0 +1,138 @@
+.luxury-room-section {
+  background-color: #2b2a2a;
+  padding: 80px 20px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+.line-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 50px;
+  background: #d4af37;
+}
+
+.room-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.choices-room-card {
+  background-color: #ffffff;
+  background-image: none;
+  color: #333;
+  padding: 30px;
+  width: 460px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: relative;
+  margin-top: 20px;
+  margin-right: -100px;
+}
+
+.room-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.room-price {
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.room-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.choices-book-now {
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.choices-book-now:hover {
+  background-color: #c9a227;
+}
+
+.room-image-placeholder {
+  width: 500px;
+  height: 300px;
+  background-color: #ccc;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.slider-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.slider-arrow {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+  transition: background-color 0.3s;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -4em;
+  gap: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #d4af37;
+}
