@@ -1,0 +1,75 @@
+/* LuxuryBookingForm.css */
+.luxury-booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  font-family: 'Georgia', serif;
+}
+
+.luxury-booking-text {
+  background: linear-gradient(to right, #1a1a1a, #6e6e6e, #1a1a1a);
+  color: white;
+  padding: 60px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  width: 50%;
+}
+
+.luxury-booking-form {
+  background-color: #bd9465;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 300px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.luxury-input-group {
+  position: relative;
+}
+
+.luxury-input-group input {
+  width: 100%;
+  padding: 8px 30px 8px 10px;
+  border: none;
+  background-color: #d4af89;
+  color: white;
+}
+
+.luxury-calendar-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto; /* allow it to capture pointer events */
+  cursor: pointer;
+}
+
+
+.luxury-dropdown-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.luxury-dropdown-row select {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #d4af89;
+  color: white;
+}
+
+.luxury-availability-btn {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding-top: 10px;
+  cursor: pointer;
+  font-style: italic;
+}

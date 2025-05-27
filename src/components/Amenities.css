@@ -1,5 +1,3 @@
-/* External CSS for Amenities Component */
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;400;500&display=swap');
 
 .amenities-section {
@@ -11,17 +9,36 @@
 }
 
 .amenities-header {
-  text-align: left;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 3rem;
 }
 
-.intro-text {
+.amenities-header-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.amenities-vertical-divider {
+  width: 1px;
+  height: 40px;
+  background: #b59c7d;
+}
+
+.amenities-subtitle {
   color: #b59c7d;
   letter-spacing: 2px;
   font-size: 0.9rem;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin: 0;
+}
+
+.amenities-header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .amenities-title {
@@ -29,7 +46,8 @@
   color: #222;
   font-weight: 600;
   line-height: 1.4;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+  max-width: 45%;
 }
 
 .amenities-description {
@@ -37,6 +55,9 @@
   color: #666;
   font-size: 0.95rem;
   line-height: 1.6;
+  max-width: 45%;
+  text-align: right;
+  margin: 0;
 }
 
 .amenities-grid {
@@ -118,10 +139,4 @@ font-family: 'Montserrat', sans-serif;
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
-}
-
-.vertical-line {
-  width: 1px;
-  height: 50px;
-  background: #bf9766;
 }

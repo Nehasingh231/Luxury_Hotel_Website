@@ -1,8 +1,13 @@
 import React from 'react'
+import SingleRoomHero from '../components/SingleRoomHero'
+import SuperiorSuiteDetails from '../components/SuperiorSuiteDetails'
 
 function SingleRoom() {
   return (
-    <div>SingleRoom</div>
+    <>
+    <SingleRoomHero />
+    <SuperiorSuiteDetails />
+    </>
   )
 }
 
