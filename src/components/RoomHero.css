@@ -1,0 +1,51 @@
+.room-hero {
+   background: linear-gradient(
+    to bottom, 
+    #222121 0%, 
+    rgba(30, 33, 33, 0.5) 50%, 
+    #222121 100%
+  );
+  color: white;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 20em;
+  position: relative;
+}
+
+.room-hero-content {
+  max-width: 800px;
+  padding-left: 40px;
+}
+
+.room-hero-subtitle {
+  color: #c8a165;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.room-hero-subtitle::before {
+  content: '';
+  height: 50px;
+  width: 1px;
+  background-color: #c8a165;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.room-hero-title {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+   margin-left: 2em;
+  font-family: 'Georgia', serif;
+}
+
+.new{
+    margin-right: 14em;
+}

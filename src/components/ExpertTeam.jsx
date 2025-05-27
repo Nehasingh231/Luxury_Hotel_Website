@@ -6,7 +6,7 @@ const ExpertTeam = () => {
   return (
     <section className="expert-team-section">
       <div className="line-container">
-        <div className="vertical-line"></div>
+        <div className="vertical-lines"></div>
       </div>
       <div className="team-header">
         <p className="subheading">MEET OUR TEAM</p>

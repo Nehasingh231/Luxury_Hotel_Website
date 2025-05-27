@@ -1,0 +1,116 @@
+.additional-services {
+  padding: 80px 20px;
+  background: linear-gradient(
+    to bottom, 
+    #222121 0%, 
+    rgba(30, 33, 33, 0.5) 50%, 
+    #222121 100%
+  );
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.additional-services-separator {
+  width: 1px;
+  height: 50px;
+  background-color: #c8a165; /* Gold color for separator */
+  margin: 0 auto 20px;
+}
+
+.additional-services-header {
+  margin-bottom: 60px;
+}
+
+.additional-services-subtitle {
+  color: #c8a165;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.additional-services-title {
+  font-size: 36px;
+  color: #fff; /* White title */
+  font-weight: 500;
+}
+
+.additional-services-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.additional-services-item {
+  width: 300px; /* Width of each item */
+  text-align: center;
+}
+
+.additional-services-placeholder {
+  background: linear-gradient(to bottom, #222121 0%, rgba(30, 33, 33, 0.5) 50%, #222121 100%); /* Updated gradient */
+  height: 300px; /* Height of placeholder */
+  border-radius: 8px;
+  position: relative; /* Positioning context for content */
+}
+
+.additional-services-content {
+  position: absolute;
+  bottom: 20px; /* Position at the bottom with some padding */
+  left: 20px; /* Align to the left with padding */
+  width: calc(100% - 40px); /* Full width minus padding */
+  text-align: left; /* Left-align the content */
+}
+
+.additional-services-name {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.additional-services-price {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.additional-services-divider {
+  width: 50px;
+  height: 1px;
+  background-color: #fff; /* White divider */
+  margin-bottom: 15px;
+}
+
+.additional-services-btn {
+  background: none;
+  border: none;
+  color: #c8a165;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Add a small arrow after the button text */
+.additional-services-btn::after {
+  content: '→';
+  font-size: 13px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .additional-services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .additional-services-item {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .additional-services-placeholder {
+    height: 250px; /* Slightly smaller height on mobile */
+  }
+}

@@ -24,7 +24,6 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         {/* Example routes — replace with your actual components */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/home1" element={<HomePage />} />
         <Route path="/home2" element={<Home02 />} />
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
