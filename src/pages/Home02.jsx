@@ -4,7 +4,7 @@ import RoomChoices from '../components/RoomChoices'
 import ClientReview from '../components/ClientReview'
 import ExpertTeam from '../components/ExpertTeam'
 import LatestNewsUpdate from '../components/LatestNewsUpdate'
-import Offer from '../components/Offer.Jsx'
+import Offer from '../components/Offer.jsx'
 import Footer from '../components/Footer.jsx'
 import LuxuryHotelAboutSection from '../components/LuxuryHotelAboutSection.jsx'
 
