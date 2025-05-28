@@ -47,17 +47,19 @@ function LuxuryAccommodations() {
   return (
     <section className="luxury-accommodations">
       <div className="accommodations-header">
-             <div className="line-container">  
-  <div className="vertical-line"></div>
-</div>
-        <p className="accommodations-subtitle">OUR ACCOMMODATION OPTIONS</p>
+        <div className="line-container">
+          <div className="vertical-line"></div>
+        </div>
+        <p className="accommodations-subtitle">OUR ROOM CHOICES</p>
         <h2 className="accommodations-title">Luxury Rooms & Suites</h2>
       </div>
 
       <div className="accommodations-list">
         {accommodations.map((room, index) => (
           <div className={`accommodation-item ${index % 2 === 1 ? 'accommodation-reverse' : ''}`} key={index}>
-            <div className="accommodation-image-placeholder" />
+            <div className="accommodation-image-wrapper">
+              <div className="accommodation-image-placeholder" />
+            </div>
             <div className="accommodation-card">
               <h3 className="accommodation-name">{room.title}</h3>
               <p className="accommodation-price">{room.price}</p>

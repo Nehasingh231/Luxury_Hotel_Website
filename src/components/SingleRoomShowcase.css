@@ -1,0 +1,79 @@
+.singleRoomShowcase-container {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.singleRoomShowcase-heading {
+  margin-bottom: 40px;
+}
+
+.singleRoomShowcase-line {
+  width: 1px;
+  height: 50px;
+  background-color: #c2a97f;
+  margin: 0 auto 20px;
+}
+
+.singleRoomShowcase-heading h2 {
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif;
+  color: #111;
+}
+
+.singleRoomShowcase-rooms {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.singleRoomShowcase-card {
+  position: relative;
+  width: 280px;
+  height: 320px;
+  background: linear-gradient(to bottom, #222, #999);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.singleRoomShowcase-card:hover {
+  transform: translateY(-5px);
+}
+
+.singleRoomShowcase-overlay h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.singleRoomShowcase-price {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.singleRoomShowcase-details {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #c2a97f;
+  gap: 5px;
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
+}
+
+.singleRoomShowcase-arrow {
+  font-size: 0.7rem;
+}
+
+.singleRoomShowcase-lineBottom {
+  width: 50px;
+  height: 1px;
+  background-color: white;
+  margin-top: 10px;
+}

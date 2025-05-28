@@ -1,0 +1,146 @@
+.luxury-intro-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 60px 80px;
+  background: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-wrap: wrap;
+}
+
+.luxury-intro-image {
+  width: 420px;
+  height: 500px;
+  background-color: #d8d8d8;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.luxury-intro-play-button {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #b58e5c;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.luxury-intro-play-button:hover {
+  background-color: #a17848;
+}
+
+.luxury-intro-play-button span {
+  font-size: 20px;
+  color: #fff;
+}
+
+.luxury-intro-content {
+  max-width: 600px;
+}
+
+.luxury-intro-section-tag {
+  letter-spacing: 2px;
+  margin-top: 10px;
+  color: #b58e5c;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.luxury-intro-headline {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #1a1a1a;
+}
+
+.luxury-intro-description {
+  color: #6c6c6c;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.luxury-intro-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 40px;
+}
+
+.luxury-intro-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.luxury-intro-icon {
+  font-size: 28px;
+  color: #999;
+}
+
+.luxury-intro-icon.luxury-intro-highlight {
+  color: #b58e5c;
+}
+
+.luxury-intro-icon.luxury-intro-muted {
+  color: #b0b0b0;
+}
+
+.luxury-intro-stat-title {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.luxury-intro-stat-value {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.luxury-intro-stat-value.luxury-intro-highlight {
+  color: #b58e5c;
+}
+
+.luxury-intro-stat-value.luxury-intro-muted {
+  color: #b0b0b0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .luxury-intro-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .luxury-intro-image {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+  }
+
+  .luxury-intro-content {
+    margin-top: 40px;
+  }
+
+  .luxury-intro-headline {
+    font-size: 30px;
+  }
+
+  .luxury-intro-stats-grid {
+    gap: 20px 30px;
+  }
+}
+
+.luxury-vertical-line {
+  width: 1px;
+  height: 50px;
+  background-color: #b58e5c;
+}

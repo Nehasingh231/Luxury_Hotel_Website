@@ -1,0 +1,139 @@
+/* Root container */
+.serviceDining-container {
+  padding: 60px 20px;
+  background-color: #fff;
+  font-family: 'Georgia', serif;
+  text-align: center; /* Affects only title and top-level text */
+}
+
+
+
+/* Section title */
+.serviceDining-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+/* Content layout */
+.serviceDining-content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto; /* Center within page */
+}
+
+
+/* Image section */
+.serviceDining-image-section {
+  position: relative;
+  width: 280px;
+  height: 500px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Placeholder image */
+.serviceDining-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #ccc 0%, #e0e0e0 100%);
+  border-radius: 8px;
+}
+
+/* Best Deals tag */
+.serviceDining-deal-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c49b6d;
+  padding: 12px 18px;
+  color: #fff;
+  text-align: right;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Deal Tag Text */
+.serviceDining-deal-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.serviceDining-deal-desc {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Fade animation for tag */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Info Section */
+.serviceDining-info-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left; /* Align text to the left */
+}
+
+
+/* Paragraph text */
+.serviceDining-paragraph {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Hours section */
+.serviceDining-hours h4,
+.serviceDining-details h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+/* Hours list */
+.serviceDining-hours ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.serviceDining-hours li {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.serviceDining-icon {
+  margin-right: 10px;
+  color: #c2a97f;
+}
+
+/* Dresscode & Terrace */
+.serviceDining-details p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px;
+}

@@ -11,12 +11,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 15px 60px;
   background-color: #222121;
   font-family: 'Cinzel', serif;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .navbar-logo {
   display: flex;
@@ -155,4 +162,24 @@
 
 .nav-link:hover {
   color: #c49b63;
+}
+
+
+/* Add these to your existing Navbar.css */
+
+.nav-item.active {
+  color: #c49b63;
+}
+
+.nav-link.active {
+  color: #c49b63 !important;
+}
+
+.dropdown li.active {
+  color: #c49b63;
+  background-color: #f9f9f9;
+}
+
+.dropdown li.active .nav-link {
+  color: #c49b63 !important;
 }

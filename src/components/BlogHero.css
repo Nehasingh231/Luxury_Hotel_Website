@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+
+
+.bloghero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background: linear-gradient(
+    to bottom, 
+    #222121 0%, 
+    rgba(30, 33, 33, 0.5) 50%, 
+    #222121 100%
+  );
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.bloghero-content {
+  position: relative;
+}
+
+.bloghero::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 1px;
+  background-color: #ccc;
+}
+
+.bloghero-subtitle {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #c49b63;
+  margin-bottom: 10px;
+}
+
+.bloghero-title {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}

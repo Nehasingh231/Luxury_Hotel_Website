@@ -1,0 +1,153 @@
+.timeline-section {
+  background: #1f1f1f;
+  color: white;
+  padding: 80px 40px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.growth-vertical-line {
+  width: 1px;
+  height: 50px;
+  background-color: #b58e5c;
+}
+
+.growth-section-tag {
+  letter-spacing: 2px;
+  color: #b58e5c;
+  font-size: 13px;
+}
+
+.timeline-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 15px 0 50px;
+}
+
+.timeline-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.timeline-year {
+  position: relative;
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.timeline-year::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-year.selected {
+  color: #b58e5c;
+  font-weight: bold;
+}
+
+.timeline-year.selected::before {
+  background-color: #b58e5c;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #555;
+  z-index: 1;
+}
+
+.timeline-content {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-card {
+  display: flex;
+  background: white;
+  color: #333;
+  width: 700px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-bottom-color: white;
+}
+
+.timeline-card-left {
+  width: 40%;
+  background: #d8d8d8;
+}
+
+.timeline-card-right {
+  padding: 30px;
+  text-align: left;
+  flex: 1;
+}
+
+.timeline-icon {
+  color: #b58e5c;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.timeline-card-right h4 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.timeline-card-right p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-bar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .timeline-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .timeline-card-left {
+    width: 100%;
+    height: 180px;
+  }
+}

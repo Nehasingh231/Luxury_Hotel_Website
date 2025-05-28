@@ -1,0 +1,115 @@
+.hotel-faq {
+  padding: 80px 40px;
+  background: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 50px;
+  background-color: #b58e5c;
+}
+
+.faq-subtitle {
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #b58e5c;
+  margin: 0;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 36px;
+  margin: 10px 0 40px;
+}
+
+.faq-columns {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.faq-column {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.faq-item {
+  cursor: pointer;
+  padding: 20px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.faq-icon {
+  font-size: 14px;
+  color: #b58e5c;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.faq-divider {
+  margin-top: 20px;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.faq-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #b58e5c;
+  cursor: pointer;
+}
+
+.footer-link {
+  font-style: italic;
+}
+
+.footer-arrow {
+  font-weight: bold;
+  transform: translateY(1px);
+}
+
+.faq-logos {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  opacity: 0.5;
+}
+
+.faq-logos img {
+  max-height: 50px;
+  object-fit: contain;
+}
+.brown-logo {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(23%) saturate(1413%) hue-rotate(5deg) brightness(98%) contrast(94%);
+}
+

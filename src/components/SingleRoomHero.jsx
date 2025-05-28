@@ -14,7 +14,7 @@ const SingleRoomHero = () => {
       <button className="srh-nav-button srh-right">
         <FaChevronRight className="srh-icon" />
       </button>
-
+ 
       {/* Dots Navigation */}
       <div className="srh-dots">
         <span className="srh-dot"></span>

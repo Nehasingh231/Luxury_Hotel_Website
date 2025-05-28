@@ -6,6 +6,7 @@ function HeroSection02() {
     <div className="hotel-homepage">
     <section className="hero-section">
         <div className="hero-content">
+        <div className="hero-line"></div>
           <h2 className="hero-subheading">BEST PLACE TO RELAX & ENJOY</h2>
           <h1 className="hero-heading">Perfect Place to Enjoy Your Life</h1>
           

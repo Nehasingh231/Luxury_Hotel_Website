@@ -1,0 +1,157 @@
+/* Base Layout */
+.menu-display {
+  font-family: 'Georgia', serif;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.menu-tab {
+  font-size: 1.1rem;
+  color: #bbb;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu-tab.active {
+  color: #c99c63;
+}
+
+.menu-tab.active::after {
+  content: '•';
+  color: #c99c63;
+  display: block;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Menu Content */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Sections */
+.menu-section {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Columns */
+.menu-column {
+  /* background-color: #1f1f1f; */
+  padding: 30px 25px;
+  width: 48%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.snack-highlight {
+  background-color: #c99c63;
+  color: #1f1f1f;
+}
+
+.menu-heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #c99c63;
+}
+
+.snack-highlight .menu-heading {
+  color: #1f1f1f;
+}
+
+/* Menu Item */
+.menu-item {
+  margin-bottom: 20px;
+}
+
+.item-title {
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #999;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.snack-highlight .item-title {
+  color: #000;
+  border-bottom: 1px dotted #333;
+}
+
+.item-price {
+  margin-left: 10px;
+}
+
+.item-description {
+  font-size: 0.9rem;
+  color: #c99c63;
+  margin-top: 4px;
+}
+
+.snack-highlight .item-description {
+  color: #1f1f1f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.menu-body {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.menu-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.snack-highlight {
+  background-color: #c99c63;
+  color: #1a1a1a;
+  padding: 25px;
+  border-radius: 8px;
+}

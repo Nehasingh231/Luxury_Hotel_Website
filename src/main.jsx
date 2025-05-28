@@ -8,12 +8,14 @@ import Navbar from './components/Navbar.jsx'
 import Home02 from './pages/Home02.jsx'
 import About from './pages/About.jsx'
 import Service from './pages/Service.jsx'
+import Pages from './pages/Pages.jsx'
 import Room from './pages/Room.jsx'
 import SingleRoom from './pages/SingleRoom.jsx'
 import Blog from './pages/Blog.jsx'
 import SingleBlog from './pages/SingleBlog'
 import Page404 from './pages/Page404.jsx'
 import Contact from './pages/Contact'
+import SingleServices from './pages/SingleServices.jsx'
 
 
 
@@ -27,6 +29,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/home2" element={<Home02 />} />
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/page" element={<Pages />} />
+        <Route path="/service/single-service" element={<SingleServices />} />
         <Route path="/pages/room" element={<Room />} />
         <Route path="/pages/single-room" element={<SingleRoom />} />
         <Route path="/pages/blog" element={<Blog />} />
