@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import React, { useState, useEffect, useRef } from 'react';
+import { FaChevronDown, FaChevronUp, FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/logo.svg'; 
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
@@ -8,6 +8,8 @@ export default function Navbar() {
   const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(null);
   const [clickedDropdown, setClickedDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navbarRef = useRef(null);
 
   const menuItems = [
     {
@@ -41,7 +43,21 @@ export default function Navbar() {
     { name: 'CONTACT US', path: '/contact' }
   ];
 
-  // Check if item or any of its dropdown items is active
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setShowDropdown(null);
+        setClickedDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const isItemActive = (item) => {
     if (location.pathname === item.path) return true;
     if (item.dropdown) {
@@ -59,10 +75,17 @@ export default function Navbar() {
   const handleDropdownItemClick = () => {
     setShowDropdown(null);
     setClickedDropdown(null);
+    setMobileMenuOpen(false); // Close mobile menu when a dropdown item is clicked
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    setShowDropdown(null);
+    setClickedDropdown(null);
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navbarRef}>
       <div className="navbar-logo">
         <img src={logo} alt="Imperial Logo" className="logo-image" />
         <div className="logo-text">
@@ -70,19 +93,30 @@ export default function Navbar() {
           <span className="grand">GRAND HOTEL</span>
         </div>
       </div>
-      <ul className="navbar-menu">
+
+      {/* Mobile menu button */}
+      <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+        {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <ul className={`navbar-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
         {menuItems.map(item => {
           const active = isItemActive(item);
           return (
             <li
               key={item.name}
               className={`nav-item ${active ? 'active' : ''}`}
-              onMouseEnter={() => item.dropdown && setShowDropdown(item.name)}
-              onMouseLeave={() => item.dropdown && !clickedDropdown && setShowDropdown(null)}
+              onMouseEnter={() => !mobileMenuOpen && item.dropdown && setShowDropdown(item.name)}
+              onMouseLeave={() => !mobileMenuOpen && item.dropdown && !clickedDropdown && setShowDropdown(null)}
             >
               <Link
                 to={item.path}
-                onClick={() => handleItemClick(item.name)}
+                onClick={() => {
+                  handleItemClick(item.name);
+                  if (mobileMenuOpen && !item.dropdown) {
+                    setMobileMenuOpen(false);
+                  }
+                }}
                 className={`nav-link ${active ? 'active' : ''}`}
               >
                 {item.name}
@@ -96,8 +130,8 @@ export default function Navbar() {
               {(item.dropdown && (showDropdown === item.name || clickedDropdown === item.name)) && (
                 <ul
                   className="dropdown"
-                  onMouseEnter={() => setShowDropdown(item.name)}
-                  onMouseLeave={() => !clickedDropdown && setShowDropdown(null)}
+                  onMouseEnter={() => !mobileMenuOpen && setShowDropdown(item.name)}
+                  onMouseLeave={() => !mobileMenuOpen && !clickedDropdown && setShowDropdown(null)}
                 >
                   {item.dropdown.map(sub => {
                     const subActive = location.pathname === sub.path;

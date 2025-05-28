@@ -23,13 +23,12 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .navbar-logo {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .logo-image {
@@ -51,12 +50,25 @@
   margin-top: -5px;
 }
 
+/* Mobile menu button */
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
 .navbar-menu {
   list-style: none;
   display: flex;
   gap: 30px;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease;
 }
 
 .nav-item {
@@ -66,8 +78,6 @@
   cursor: pointer;
   transition: color 0.3s;
   padding: 10px 0;
-  display: flex;
-  align-items: center;
 }
 
 .nav-item:hover,
@@ -96,6 +106,7 @@
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .nav-item:hover .dropdown,
@@ -113,44 +124,10 @@
   transition: all 0.2s;
 }
 
-.dropdown li:hover {
+.dropdown li:hover,
+.dropdown li.active {
   color: #c49b63;
   background-color: #f9f9f9;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 992px) {
-  .navbar {
-    padding: 15px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-menu {
-    width: 100%;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 15px;
-    display: none; /* Will be toggled with mobile menu button */
-  }
-
-  .nav-item {
-    padding: 12px 0;
-    border-bottom: 1px solid #333;
-  }
-
-  .dropdown {
-    position: static;
-    box-shadow: none;
-    border: none;
-    display: none;
-    margin-top: 5px;
-  }
-
-  .nav-item:hover .dropdown,
-  .nav-item.active .dropdown {
-    display: block;
-  }
 }
 
 .nav-link {
@@ -160,13 +137,87 @@
   align-items: center;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: #c49b63;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 20px;
+  }
 
-/* Add these to your existing Navbar.css */
+  .mobile-menu-button {
+    display: block;
+  }
 
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #222121;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .navbar-menu.mobile-menu-open {
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    border-top: 1px solid #333;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .dropdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav-item.active .dropdown,
+  .dropdown.show-dropdown {
+    max-height: 500px;
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+
+  .dropdown li {
+    color: #ccc;
+    padding: 10px 15px;
+    border-bottom: none;
+  }
+
+  .dropdown li:hover,
+  .dropdown li.active {
+    color: #c49b63;
+    background-color: transparent;
+  }
+}
+
+/* Active state styles */
 .nav-item.active {
   color: #c49b63;
 }
@@ -177,7 +228,6 @@
 
 .dropdown li.active {
   color: #c49b63;
-  background-color: #f9f9f9;
 }
 
 .dropdown li.active .nav-link {
