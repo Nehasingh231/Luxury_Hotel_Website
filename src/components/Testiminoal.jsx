@@ -1,38 +1,37 @@
 import React from 'react';
 import './Testimonial.css';
+import { FaStar } from 'react-icons/fa';
 
 const Testimonial = () => {
   return (
     <section className="testimonial-section">
-      <div className="testimonial-overlay">
-        <div className="testimonial-header">
-          <div className="line"></div>
-          <p className="subtitle">OUR CUSTOMER REVIEW</p>
-          <h2 className="title">What Our Client Says</h2>
-        </div>
+      <div className="testimonial-header">
+        <div className="testimonial-line" />
+        <p className="testimonial-subtitle">Our Customer Review</p>
+        <h2 className="testimonial-title">What Our Client Says</h2>
+      </div>
 
+      <div className="testimonial-card-wrapper">
+        <div className="testimonial-image-placeholder" />
         <div className="testimonial-card">
-          <div className="testimonial-image-placeholder"></div>
-
-          <div className="testimonial-content">
-            <div className="testimonial-top">
-              <div className="stars">★★★★★</div>
-              <p className="testimonial-text">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-              </p>
-            </div>
-
-            <div className="testimonial-bottom">
-              <p className="testimonial-author">Jackson Dean</p>
-              <p className="testimonial-role">Guest</p>
-            </div>
+          <div className="testimonial-stars">
+            {[...Array(5)].map((_, i) => (
+              <FaStar key={i} className="testimonial-star" />
+            ))}
+          </div>
+          <p className="testimonial-text">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam”
+          </p>
+          <div className="testimonial-author">
+            <span className="testimonial-name">Jackson Dean</span>
+            <span className="testimonial-role">Guest</span>
           </div>
         </div>
+      </div>
 
-        <div className="testimonial-dots">
-          <span className="dot active"></span>
-          <span className="dot"></span>
-        </div>
+      <div className="testimonial-dots">
+        <span className="dot active"></span>
+        <span className="dot"></span>
       </div>
     </section>
   );

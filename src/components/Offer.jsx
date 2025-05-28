@@ -11,7 +11,7 @@ const Offer = () => {
       <div className="offer-button">
         <button>
           <span>Book Now</span>
-          <span className="arrow">→</span>
+          <span className="offer-arrow">→</span>
         </button>
       </div>
     </div>

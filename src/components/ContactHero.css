@@ -181,3 +181,53 @@
   background-color: #b48b4a; 
   margin-bottom: 10px;
 }
+
+/* Error Styling */
+.contact-hero-input-wrapper.error {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 0 1px #ff4d4f;
+}
+
+.error-container {
+  margin-top: 4px;
+  min-height: 22px;
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.error-message::before {
+  content: "⚠ ";
+  margin-right: 4px;
+}
+
+/* Success message */
+.contact-success-message {
+  text-align: center;
+  padding: 20px;
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 4px;
+}
+
+.contact-success-message h3 {
+  color: #52c41a;
+  margin-bottom: 10px;
+}
+
+/* Loading state */
+.contact-hero-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #d9d9d9;
+}
+
+/* Input focus states */
+.contact-hero-input-wrapper:not(.error):focus-within {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 1px #1890ff;
+}

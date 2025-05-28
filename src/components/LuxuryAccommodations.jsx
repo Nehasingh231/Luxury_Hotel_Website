@@ -1,93 +1,72 @@
 import React from 'react';
-import './luxuryAccommodations.css';
+import './LuxuryAccommodations.css';
+import { FaUser, FaBath, FaUtensils, FaBed, FaWifi, FaSnowflake, FaChevronRight } from 'react-icons/fa';
 
-const accommodations = [
+const roomData = [
   {
     title: 'Superior Suite',
     price: '$300/Night',
-    category: 'Exclusive',
-    features: [
-      { name: '1-2 Persons', icon: '👤' },
-      { name: 'King Size Bed', icon: '🛏️' },
-      { name: 'Bathtub', icon: '🛁' },
-      { name: 'Free WiFi', icon: '📶' },
-      { name: 'Free Breakfast', icon: '🍳' },
-      { name: 'Air Conditioner', icon: '❄️' },
-    ],
+    features: ['1-2 Persons', 'Bathtub', 'Free Breakfast', 'King Size Bed', 'Free Wifi', 'Air Conditioner'],
   },
   {
     title: 'Junior Suite',
     price: '$270/Night',
-    category: 'Exclusive',
-    features: [
-      { name: '1-2 Persons', icon: '👤' },
-      { name: 'King Size Bed', icon: '🛏️' },
-      { name: 'Bathtub', icon: '🛁' },
-      { name: 'Free WiFi', icon: '📶' },
-      { name: 'Free Breakfast', icon: '🍳' },
-      { name: 'Air Conditioner', icon: '❄️' },
-    ],
+    features: ['1-2 Persons', 'Bathtub', 'Free Breakfast', 'King Size Bed', 'Free Wifi', 'Air Conditioner'],
   },
   {
     title: 'Deluxe Room',
     price: '$210/Night',
-    category: 'Exclusive',
-    features: [
-      { name: '1-2 Persons', icon: '👤' },
-      { name: 'King Size Bed', icon: '🛏️' },
-      { name: 'Bathtub', icon: '🛁' },
-      { name: 'Free WiFi', icon: '📶' },
-      { name: 'Free Breakfast', icon: '🍳' },
-      { name: 'Air Conditioner', icon: '❄️' },
-    ],
+    features: ['1-2 Persons', 'Bathtub', 'Free Breakfast', 'King Size Bed', 'Free Wifi', 'Air Conditioner'],
   },
 ];
 
-function LuxuryAccommodations() {
+const iconMap = {
+  '1-2 Persons': <FaUser />,
+  Bathtub: <FaBath />,
+  'Free Breakfast': <FaUtensils />,
+  'King Size Bed': <FaBed />,
+  'Free Wifi': <FaWifi />,
+  'Air Conditioner': <FaSnowflake />,
+};
+
+const LuxuryAccommodations = () => {
   return (
-    <section className="luxury-accommodations">
-      <div className="accommodations-header">
-        <div className="line-container">
-          <div className="vertical-line"></div>
-        </div>
-        <p className="accommodations-subtitle">OUR ROOM CHOICES</p>
-        <h2 className="accommodations-title">Luxury Rooms & Suites</h2>
+    <section className="luxacc-container">
+      <div className="luxacc-header">
+        <div className="luxacc-line"></div>
+        <p className="luxacc-subtitle">OUR ROOM CHOICES</p>
+        <h2 className="luxacc-title">Luxury Rooms & Suites</h2>
       </div>
 
-      <div className="accommodations-list">
-        {accommodations.map((room, index) => (
-          <div className={`accommodation-item ${index % 2 === 1 ? 'accommodation-reverse' : ''}`} key={index}>
-            <div className="accommodation-image-wrapper">
-              <div className="accommodation-image-placeholder" />
-            </div>
-            <div className="accommodation-card">
-              <h3 className="accommodation-name">{room.title}</h3>
-              <p className="accommodation-price">{room.price}</p>
-              <p className="accommodation-category">{room.category}</p>
-              <div className="accommodation-features">
+      <div className="luxacc-rooms">
+        {roomData.map((room, index) => (
+          <div key={index} className={`luxacc-room-card ${index % 2 === 0 ? 'left' : 'right'}`}>
+            <div className="luxacc-image-placeholder"></div>
+            <div className="luxacc-room-info">
+              <div className="luxacc-room-title">{room.title}</div>
+              <div className="luxacc-room-price">{room.price}</div>
+              <div className="luxacc-features">
                 {room.features.map((feat, i) => (
-                  <span key={i} className="accommodation-feature">
-                    <span className="feature-icon">{feat.icon}</span>
-                    {feat.name}
-                  </span>
+                  <div key={i} className="luxacc-feature-item">
+                    {iconMap[feat]}
+                    <span>{feat}</span>
+                  </div>
                 ))}
               </div>
-              <div className="accommodation-actions">
-                <button className="accommodation-details-btn">Details</button>
-                <button className="accommodation-book-btn">Book Now</button>
+              <div className="luxacc-actions">
+                <a href="#" className="luxacc-link">
+                  Details <FaChevronRight />
+                </a>
+                <a href="#" className="luxacc-link book">
+                  Book Now <FaChevronRight />
+                </a>
               </div>
             </div>
           </div>
         ))}
       </div>
-
-      <div className="accommodations-dots">
-        <span className="dot active"></span>
-        <span className="dot"></span>
-        <span className="dot"></span>
-      </div>
     </section>
   );
-}
+};
 
 export default LuxuryAccommodations;

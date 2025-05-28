@@ -6,11 +6,13 @@ import ExpertTeam from '../components/ExpertTeam'
 import LatestNewsUpdate from '../components/LatestNewsUpdate'
 import Offer from '../components/Offer.Jsx'
 import Footer from '../components/Footer.jsx'
+import LuxuryHotelAboutSection from '../components/LuxuryHotelAboutSection.jsx'
 
 function Home02() {
   return (
     <>
      <HeroSection02 />
+     <LuxuryHotelAboutSection />
      <RoomChoices />
      <ClientReview />
      <ExpertTeam />

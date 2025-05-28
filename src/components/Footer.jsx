@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import { FaTwitter, FaFacebookF, FaInstagram, FaPinterestP, FaDribbble, FaChevronRight } from "react-icons/fa";
 import logo from '../assets/logo.svg'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  return (
+ const [email, setEmail] = useState("");
+
+  const handleSubscribe = () => {
+    if (email.trim()) {
+      console.log("Subscribed with email:", email); // Replace this with actual backend logic
+      alert("Thank you for subscribing!");
+      setEmail("");
+    } else {
+      alert("Please enter a valid email address.");
+    }
+  };
+
+
+  return ( 
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section logo-section">
@@ -20,19 +34,24 @@ const Footer = () => {
         <div className="footer-section links-section">
           <h3>USEFUL LINKS</h3>
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICE</a></li>
-            <li><a href="#">ROOM</a></li>
+            <li><Link to="/">HOME</Link></li>
+            <li><Link to="/about">ABOUT</Link></li>
+            <li><Link to="/service">SERVICE</Link></li>
+            <li><Link to="/pages/room">ROOM</Link></li>
           </ul>
         </div>
 
         <div className="footer-section subscribe-section">
           <h3>SUBSCRIBE</h3>
-          <p>Don't miss to subscribe our news, kindly fill the form bellow</p>
+          <p>Don't miss to subscribe our news, kindly fill the form below</p>
           <div className="subscribe-form">
-            <input type="email" placeholder="Your Email Here" />
-            <div className="chevron-button">
+            <input
+              type="email"
+              placeholder="Your Email Here"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <div className="chevron-button" onClick={handleSubscribe}>
               <FaChevronRight />
             </div>
           </div>

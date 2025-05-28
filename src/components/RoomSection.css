@@ -1,37 +1,47 @@
+/* Global box-sizing and overflow fix */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .rooms-section {
-  padding: 80px 20px;
+  padding: clamp(2rem, 5vw, 4rem) 5vw;
   background: #fff;
   text-align: center;
   font-family: 'Georgia', serif;
-  margin-top: 100px;
+  margin-top: clamp(3rem, 10vw, 5rem);
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .rooms-header {
-  margin-bottom: 50px;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 .rooms-subtitle {
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
   color: #c9a96e;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   position: relative;
 }
 
 .rooms-subtitle::before {
   content: '';
   position: absolute;
-  top: -70px;
+  top: clamp(-3rem, -8vw, -4rem);
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
-  height: 50px;
+  height: clamp(1.5rem, 5vw, 2.5rem);
   background: #c9a96e;
 }
 
 .rooms-header h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 400;
   color: #333;
   text-transform: capitalize;
@@ -41,8 +51,9 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto auto;
-  gap: 20px;
-  max-width: 1200px;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  max-width: 100%; /* Prevent overflow */
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -54,7 +65,7 @@
     rgba(34, 33, 33, 0.24),
     #222121
   );
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -65,12 +76,12 @@
 
 .large-card {
   grid-column: span 3;
-  height: 300px;
+  height: clamp(12rem, 40vw, 18.75rem);
 }
 
 .small-card {
   grid-column: span 2;
-  height: 250px;
+  height: clamp(10rem, 35vw, 15.625rem);
 }
 
 .room-overlay {
@@ -78,39 +89,37 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: clamp(0.75rem, 2vw, 1.25rem);
   color: white;
   text-align: left;
 }
 
 .room-overlay h3 {
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 
 .room-overlay p {
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
   color: #ccc;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .divider-line {
   border-bottom: 1px solid #fff;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
-
-
 
 .book-now {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3125rem;
   color: #c9a96e;
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
   text-decoration: none;
   border-bottom: 1px solid #c9a96e;
-  padding-bottom: 2px;
+  padding-bottom: 0.125rem;
   transition: color 0.3s ease;
 }
 
@@ -121,24 +130,108 @@
 
 .book-and-icons {
   display: flex;
-  justify-content: space-between; /* This is key */
-  align-items: center; /* Vertical alignment */
-  width: 100%; /* Ensure full width */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 0; /* Prevent flex overflow */
 }
 
 .room-icons {
   display: flex;
-  gap: 10px;
-  margin-left: auto; /* Pushes icons to the right */
+  gap: clamp(0.5rem, 1.5vw, 0.625rem);
+  margin-left: auto;
 }
 
 .room-icons img {
-  width: 20px;
-  height: 20px;
+  width: clamp(0.875rem, 2.5vw, 1.25rem);
+  height: clamp(0.875rem, 2.5vw, 1.25rem);
   cursor: pointer;
-   transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .room-icons img:hover {
-  transform: translateY(-3px); /* Move up slightly */
+  transform: translateY(-0.1875rem);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .rooms-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    gap: 0.75rem;
+  }
+
+  .large-card {
+    grid-column: span 2; /* Full width for large cards */
+    height: clamp(10rem, 35vw, 15rem);
+  }
+
+  .small-card {
+    grid-column: span 1; /* Half width for small cards */
+    height: clamp(8rem, 30vw, 12.5rem);
+  }
+
+  .rooms-subtitle::before {
+    top: clamp(-2rem, -6vw, -2.5rem);
+    height: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .room-overlay {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rooms-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    gap: 0.5rem;
+  }
+
+  .large-card,
+  .small-card {
+    grid-column: span 1; /* Full width for all cards */
+    height: clamp(8rem, 50vw, 12rem);
+  }
+
+  .rooms-section {
+    padding: clamp(1.5rem, 4vw, 2rem) 3vw;
+  }
+
+  .rooms-header h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .rooms-subtitle {
+    font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  }
+
+  .room-overlay h3 {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+
+  .room-overlay p {
+    font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  }
+
+  .book-now {
+    font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+  }
+
+  .room-icons img {
+    width: clamp(0.75rem, 2vw, 1rem);
+    height: clamp(0.75rem, 2vw, 1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .rooms-grid {
+    grid-template-columns: repeat(6, 1fr); /* Restore original grid for desktop */
+  }
+
+  .large-card {
+    grid-column: span 3;
+  }
+
+  .small-card {
+    grid-column: span 2;
+  }
 }

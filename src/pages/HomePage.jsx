@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./HomePage.css";
 import { FaCalendarAlt, FaChevronDown, FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import DatePicker from "react-datepicker";
@@ -8,10 +8,22 @@ import Amenities from "../components/Amenities";
 import Testimonial from "../components/Testiminoal";
 import TeamSection from "../components/TeamSection";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-
+  
 
 const HomePage = () => {
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: false,
+  });
+}, []);
+
+
   const [checkInDate, setCheckInDate] = useState(new Date());
   const [checkOutDate, setCheckOutDate] = useState(() => {
     const date = new Date();
@@ -84,7 +96,7 @@ const HomePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" data-aos="zoom-in" >
         <div className="hero-overlay">
           <div className="hero-text">
             <div className="hero-subtitle">
@@ -92,10 +104,10 @@ const HomePage = () => {
               <p>Best Place To Relax & Enjoy</p>
             </div>
             <h1>A Luxurious Way To<br />Enjoy Your Life</h1>
-            <button className="discover-btn">
-              <span>Discover Rooms</span>
-              <FaChevronRight />
-            </button>
+            <Link to="/pages/room" className="hero-discover-btn">
+      <span>Discover Rooms</span>
+      <FaChevronRight className="hero-chevron-icon"/>
+    </Link>
           </div>
 
           <div className="arrow left-arrow">
@@ -176,10 +188,11 @@ const HomePage = () => {
         </div>
       </section>
 
-  <RoomSection />
-  <Amenities />
-  <Testimonial />
-  <TeamSection />
+  <div data-aos="fade-up"><RoomSection /></div>
+<div data-aos="fade-right"><Amenities /></div>
+<div data-aos="zoom-in"><Testimonial /></div>
+<div data-aos="fade-left"><TeamSection /></div>
+
   <Footer />
     </>
   );

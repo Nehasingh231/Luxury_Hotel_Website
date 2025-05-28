@@ -1,265 +1,175 @@
-/* HotelHomepage.css */
-.hotel-homepage {
-  font-family: 'Playfair Display', serif;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
-
-
-.hero-section {
-  background: linear-gradient(
+.luxhero-section {
+ background: linear-gradient(
     to bottom, 
     #222121 0%, 
     rgba(30, 33, 33, 0.5) 50%, 
     #222121 100%
   );
-  padding: 80px;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 100px 60px;
+  color: white;
   position: relative;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-.hero-content {
-  flex: 1;
+.luxhero-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.luxhero-left {
   max-width: 50%;
 }
 
-.hero-subheading {
-  color: #d4af37;
-  font-size: 16px;
-  letter-spacing: 3px;
+.luxhero-tagline {
+  color: #d4a853;
+  letter-spacing: 2px;
+  font-weight: 500;
   margin-bottom: 20px;
-  text-transform: uppercase;
 }
 
-.hero-heading {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  line-height: 1.2;
+.luxhero-heading {
+  font-size: 52px;
+  line-height: 1.3;
+  font-weight: 300;
+  margin-bottom: 40px;
 }
 
-.rating {
+.luxhero-rating-block {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  gap: 10px;
 }
 
-.rating-text {
-  margin-right: 10px;
+.luxhero-circles .luxhero-circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #d4a853;
+  border-radius: 50%;
+  display: inline-block;
+  background: #f5f5f5;
+  margin-right: 5px;
+}
+
+.luxhero-rating-text {
+  color: #ddd;
   font-size: 14px;
 }
 
-.stars {
-  color: #d4af37;
-  font-size: 14px;
-  letter-spacing: 2px;
+.luxhero-stars {
+  color: gold;
+  font-size: 18px;
 }
 
-.slider-dots {
-  display: flex;
+.luxhero-slider-controls {
   margin-top: 30px;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
+.luxhero-slider-btn {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 12px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
   margin-right: 10px;
   cursor: pointer;
 }
 
-.dot.active {
-  background-color: #d4af37;
-}
-
-/* Booking Form */
-.booking-form {
-  background-color: #000;
+.luxhero-booking-panel {
+  background: #2b2b2b;
+  color: white;
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  width: 350px;
-  position: absolute;
-  right: 80px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+  width: 100%;
+  max-width: 320px; /* keep card width controlled */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  box-sizing: border-box; /* important for internal spacing */
 }
 
-
-.booking-form h3 {
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.form-group {
+.luxhero-field-group {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.luxhero-field-group .luxhero-label {
   display: block;
-  color: #666;
-  margin-bottom: 8px;
-  font-size: 14px;
+  margin-bottom: 5px;
 }
 
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.check-availability {
-  background-color: #d4af37;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  width: 100%;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.check-availability:hover {
-  background-color: #c9a227;
-}
-
-/* Discover Section */
-.discover-section {
-  display: flex;
-  padding: 80px 40px;
-  position: relative;
-}
-
-.video-placeholder {
-  flex: 1;
-  background-color: #e0e0e0;
-  height: 400px;
-  position: relative;
-}
-
-.play-button {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: #8b5a2b;
-  border-radius: 50%;
+.luxhero-field-input {
   display: flex;
   align-items: center;
-  justify-content: center;
-  right: -30px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 2;
-}
-
-.play-button::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-left: 20px solid #fff;
-  margin-left: 5px;
-}
-
-.discover-content {
-  flex: 1;
-  padding-left: 80px;
-  color: #333;
-}
-
-.discover-subheading {
-  color: #d4af37;
-  font-size: 16px;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.discover-heading {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
-}
-
-.discover-text {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.discover-button {
-  background-color: #d4af37;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
+  background: #1c1c1c;
+  padding: 8px 12px;
   border-radius: 4px;
-  font-weight: bold;
+  justify-content: space-between;
+}
+
+.luxhero-field-input input {
+  background: transparent;
+  border: none;
+  color: white;
+  flex: 1;
+}
+
+.luxhero-field-input svg {
+  color: #d4a853;
+}
+
+.luxhero-double-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* prevents overflow by wrapping if needed */
+}
+
+.luxhero-double-row .luxhero-field-group {
+  flex: 1;
+  min-width: 0; 
+}
+
+.luxhero-check-btn {
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  color: #d4a853;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: bold;
 }
 
-.discover-button:hover {
-  background-color: #c9a227;
-}
-.hero-line{
-width: 1px;
-  height: 60px;
-  background-color: #b48b4a; 
-  margin-bottom: 10px;
-}
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .hero-content {
-    max-width: 100%;
-    text-align: center;
-  }
-  
-  .booking-form {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 40px;
-  }
-  
-  .discover-section {
-    flex-direction: column;
-  }
-  
-  .discover-content {
-    padding-left: 0;
-    padding-top: 60px;
-  }
-  
-  .play-button {
-    right: 50%;
-    transform: translateX(50%) translateY(-50%);
-  }
+.luxhero-field-input select {
+  background: transparent;
+  border: none;
+  color: white;
+  flex: 1;
+  width: 100%;
+  font-size: 14px;
+  appearance: none;
+  outline: none;
 }
 
-@media (max-width: 768px) {
-  .hero-heading {
-    font-size: 36px;
-  }
-  
-  .discover-heading {
-    font-size: 28px;
-  }
+.luxhero-field-input {
+  position: relative;
 }
+
+.luxhero-field-input::after {
+  content: '▼';
+  position: absolute;
+  right: 12px;
+  color: #d4a853;
+  pointer-events: none;
+}
+
+.datepicker-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.luxhero-datepicker {
+  border: none;
+  padding: 8px;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+}
+
 

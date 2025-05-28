@@ -1,177 +1,124 @@
-.luxury-accommodations {
+.luxacc-container {
+  background-color: #ffffff;
   padding: 80px 20px;
-  background-color: #fff;
-  text-align: center;
-  font-family: 'Georgia', serif;
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.accommodations-header {
+.luxacc-header {
+  text-align: center;
   margin-bottom: 60px;
 }
 
-.accommodations-subtitle {
-  color: #c8a165;
-  text-transform: uppercase;
+.luxacc-line {
+  height: 60px;
+  width: 1px;
+  background-color: #c59d69;
+  margin: 0 auto 20px;
+}
+
+.luxacc-subtitle {
+  color: #c59d69;
   letter-spacing: 2px;
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.accommodations-title {
+.luxacc-title {
   font-size: 36px;
-  color: #222;
+  color: #1c1c1c;
+}
+
+.luxacc-rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.luxacc-room-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.luxacc-room-card.left .luxacc-image-placeholder {
+  order: 1;
+}
+
+.luxacc-room-card.left .luxacc-room-info {
+  order: 2;
+}
+
+.luxacc-room-card.right .luxacc-image-placeholder {
+  order: 2;
+}
+
+.luxacc-room-card.right .luxacc-room-info {
+  order: 1;
+}
+
+.luxacc-image-placeholder {
+  width: 60%;
+  height: 280px;
+  background-color: #dcdcdc;
+  flex-shrink: 0;
+}
+
+.luxacc-room-info {
+  background-color: #1c1c1c;
+  color: white;
+  width: 35%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.luxacc-room-title {
+  font-size: 18px;
   font-weight: 500;
 }
 
-.accommodations-list {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  align-items: center;
-}
-
-.accommodation-item {
-  position: relative; /* Create positioning context for absolute positioning */
-  width: 100%;
-  max-width: 900px; /* Reduced to accommodate smaller placeholder */
-  display: flex;
-  justify-content: center; /* Center the placeholder */
-}
-
-.accommodation-item.accommodation-reverse {
-  justify-content: center; /* Still center the placeholder */
-}
-
-.accommodation-image-placeholder {
-  background-color: #ddd;
-  width: 500px; /* Reduced width */
-  height: 350px; /* Kept height larger than the card */
-}
-
-.accommodation-card {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 30px;
-  width: 400px; /* Smaller than the placeholder */
-  height: auto; /* Height adjusts to content */
-  position: absolute; /* Overlap on the placeholder */
-  top: 50%; /* Vertically center on the placeholder */
-  transform: translateY(-50%); /* Adjust for true centering */
-  left: 0; /* Align the left edge with the placeholder for non-reversed items */
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.accommodation-item.accommodation-reverse .accommodation-card {
-  left: auto; /* Reset left positioning */
-  right: 0; /* Align the right edge with the placeholder for reversed items */
-}
-
-.accommodation-name {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.accommodation-price {
+.luxacc-room-price {
+  color: #c59d69;
   font-size: 14px;
-  color: #c8a165;
-  margin-bottom: 5px;
+  margin: 5px 0 20px;
 }
 
-.accommodation-category {
-  font-size: 12px;
-  color: #aaa;
-  margin-bottom: 15px;
-}
-
-.accommodation-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 13px;
+.luxacc-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
   margin-bottom: 20px;
 }
 
-.accommodation-feature {
-  background-color: #2c2c2c;
-  padding: 5px 10px;
-  border-radius: 4px;
+.luxacc-feature-item {
   display: flex;
   align-items: center;
-  gap: 5px; /* Space between icon and text */
+  gap: 8px;
+  font-size: 14px;
+  color: #ccc;
 }
 
-.feature-icon {
-  font-size: 16px; /* Size of the icon */
-}
-
-.accommodation-actions {
+.luxacc-actions {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #c59d69;
+  padding-top: 15px;
 }
 
-.accommodation-details-btn,
-.accommodation-book-btn {
-  background: none;
-  border: none;
-  color: #c8a165;
-  font-size: 13px;
-  cursor: pointer;
-}
-
-.accommodation-book-btn {
-  border-left: 1px solid #c8a165;
-  padding-left: 10px;
-}
-
-/* Styles for the dots */
-.accommodations-dots {
+.luxacc-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 40px; /* Space between the last accommodation item and the dots */
+  align-items: center;
+  gap: 6px;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: #aaa; /* Inactive dot color */
-  border-radius: 50%; /* Make it circular */
-  display: inline-block;
-}
-
-.dot.active {
-  background-color: #c8a165; /* Active dot color to match the theme */
-}
-
-/* Responsive adjustments */
-@media (max-width: 800px) {
-  .accommodation-item,
-  .accommodation-item.accommodation-reverse {
-    flex-direction: column; /* Stack vertically on smaller screens */
-    align-items: center;
-  }
-
-  .accommodation-image-placeholder {
-    width: 100%;
-    max-width: 450px; /* Adjust for smaller screens */
-    height: 300px; /* Slightly smaller height */
-  }
-
-  .accommodation-card {
-    position: relative; /* Remove absolute positioning on smaller screens */
-    top: auto;
-    transform: none;
-    right: auto;
-    left: auto;
-    width: 100%;
-    max-width: 400px; /* Match the card width */
-    margin-top: -50px; /* Slight overlap at the bottom of the placeholder */
-  }
-
-  .accommodation-item.accommodation-reverse .accommodation-card {
-    left: auto; /* Reset for smaller screens */
-  }
+.luxacc-link.book {
+  color: #c59d69;
+  font-style: italic;
 }
