@@ -13,7 +13,7 @@
 .additional-services-separator {
   width: 1px;
   height: 50px;
-  background-color: #c8a165; /* Gold color for separator */
+  background-color: #c8a165; 
   margin: 0 auto 20px;
 }
 
@@ -31,7 +31,7 @@
 
 .additional-services-title {
   font-size: 36px;
-  color: #fff; /* White title */
+  color: #fff; 
   font-weight: 500;
 }
 
@@ -43,23 +43,23 @@
 }
 
 .additional-services-item {
-  width: 300px; /* Width of each item */
+  width: 300px; 
   text-align: center;
 }
 
 .additional-services-placeholder {
   background: linear-gradient(to bottom, #222121 0%, rgba(30, 33, 33, 0.5) 50%, #222121 100%); /* Updated gradient */
-  height: 300px; /* Height of placeholder */
+  height: 300px; 
   border-radius: 8px;
-  position: relative; /* Positioning context for content */
+  position: relative; 
 }
 
 .additional-services-content {
   position: absolute;
-  bottom: 20px; /* Position at the bottom with some padding */
-  left: 20px; /* Align to the left with padding */
-  width: calc(100% - 40px); /* Full width minus padding */
-  text-align: left; /* Left-align the content */
+  bottom: 20px; 
+  left: 20px; 
+  width: calc(100% - 40px); 
+  text-align: left; 
 }
 
 .additional-services-name {
@@ -77,7 +77,7 @@
 .additional-services-divider {
   width: 50px;
   height: 1px;
-  background-color: #fff; /* White divider */
+  background-color: #fff; 
   margin-bottom: 15px;
 }
 
@@ -92,7 +92,7 @@
   gap: 5px;
 }
 
-/* Add a small arrow after the button text */
+
 .additional-services-btn::after {
   content: '→';
   font-size: 13px;

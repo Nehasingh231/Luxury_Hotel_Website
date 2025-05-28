@@ -15,19 +15,19 @@
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers all child elements */
+  align-items: center; 
 }
 
 .blogpost-image {
   height: 200px;
   background-color: #ccc;
-  width: 60%; /* Reduced width - adjust as needed */
+  width: 60%;
   margin-bottom: 15px;
 }
 
 .blogpost-content {
-  width: 60%; /* Same width as image */
-  padding: 0; /* Remove any padding */
+  width: 60%; 
+  padding: 0; 
 }
 
 .blogpost-title {
@@ -47,8 +47,8 @@
   display: flex;
   gap: 10px;
   margin-top: 20px;
-  width: 60%; /* Same width as blog content */
-  justify-content: center; /* Center pagination items */
+  width: 60%;
+  justify-content: center; 
 }
 
 .pagination span {
@@ -78,9 +78,9 @@
   background-color: #1e1e1e;
   color: #fff;
   padding: 20px;
-  min-height: 100%; /* Makes sidebar as tall as the main content */
+  min-height: 100%; 
   position: sticky;
-  top: 20px; /* Keeps sidebar fixed while scrolling */
+  top: 20px;
 }
 
 .blogpage-sidebar h4 {
@@ -136,7 +136,7 @@
 .thumbnail {
   width: 60px;
   height: 60px;
-  background-color: #ccc; /* Placeholder color */
+  background-color: #ccc; 
   flex-shrink: 0;
 }
 
