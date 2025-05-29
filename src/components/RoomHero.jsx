@@ -1,5 +1,5 @@
 import React from 'react';
-import './roomhero.css';
+import './RoomHero.css';
 
 function RoomHero() {
   return (
