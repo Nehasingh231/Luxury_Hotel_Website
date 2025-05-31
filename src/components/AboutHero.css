@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .abouthero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  min-height: 60vh;
   background: linear-gradient(
     to bottom, 
     #222121 0%, 
@@ -14,9 +20,12 @@
   text-align: center;
   position: relative;
   color: white;
+  padding: 0 1rem;
+  overflow: hidden;
 }
 
 .abouthero-content {
+  max-width: 90%;
   position: relative;
 }
 
@@ -33,15 +42,18 @@
 
 .abouthero-subtitle {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem; /* 12px */
   letter-spacing: 2px;
   color: #c49b63;
   margin-bottom: 10px;
 }
 
 .abouthero-title {
-  font-size: 48px;
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive size */
   font-weight: 400;
   font-family: 'Playfair Display', serif;
   letter-spacing: 1px;
+  line-height: 1.2;
+  word-break: break-word;
 }
+
